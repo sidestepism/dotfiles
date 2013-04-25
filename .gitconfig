@@ -1,0 +1,19 @@
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/ryohei/.global_ignore
+[user]
+	name = sidestepism
+	email = fushimi.ryohe.i@gmail.com
+[github]
+	user = sidestepism
+	token = 0173808b2d7c475fcd29cfd8d242353d
+[alias]
+	log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+[color]
+	ui = auto
+[merge]
+	tool = opendiff
+[rerere]
+	enabled = true
+[push]
+	default = matching
