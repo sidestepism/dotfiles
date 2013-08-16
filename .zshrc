@@ -1,6 +1,7 @@
 disable r
 
 source "$HOME/.rvm/scripts/rvm"
+alias javah="javah -J-Dfile.encoding=UTF-8" 
 
 export DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
 export DYLD_SHARED_REGION=avoid
@@ -16,7 +17,7 @@ alias co="git commit --verbose"
 alias ch="git checkout"
 alias gr="grunt"
 
-export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:$PATH:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/"
+export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:$PATH:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/"
 alias apache_start="sudo /opt/local/apache2/bin/apachectl start"
 alias apache_stop="sudo /opt/local/apache2/bin/apachectl stop"
 alias apache_restart="sudo /opt/local/apache2/bin/apachectl restart"
@@ -208,4 +209,5 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+PATH=$PATH:$HOME/.rbenv/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

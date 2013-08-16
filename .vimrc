@@ -1,44 +1,80 @@
-
-set tabstop=4
-set autoindent
-set expandtab
-set shiftwidth=4
-
+set nu
+set cursorline
+set showmatch
+set incsearch
+set hlsearch
+set smartcase
+set ignorecase
+set scs
+set si
+set foldmethod=manual
+set encoding=utf-8
 set fileencoding=utf-8
+set fileformat=unix
+set showtabline=2
+set expandtab
+set tabpagemax=50
+set fo=cql
+set ts=4
+set sw=4
+set sts=4
+set vb t_vb=
+set backspace=indent,eol,start
+set list
+set listchars=tab:»-,trail:-
+syntax on
+" filetype plugin on
+colorscheme default
 
-set enc=utf-8
-set fenc=utf-8
-set fencs=utf-8
+" let g:neocomplcache_enable_at_startup = 1
+let g:jscomplete_use = [ 'dom' ]
 
-syntax on "シンタックスハイライトを有効にする
-set nobackup "バックアップファイルを作らない設定にする
-set autoindent "オートインデントする
-set number "行番号を表示する
-set incsearch "インクリメンタルサーチ
-set ignorecase "検索時に大文字小文字を無視する
-set showmatch "対応する括弧のハイライト表示する
-set showmode "モード表示する
-set title "編集中のファイル名を表示する
-set ruler "ルーラーの表示する
-set tabstop=4 "タブ文字数を4にする
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-match ZenkakuSpace /　/" 全角スペースの表示
+vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<CR><CR>
 
-set nocompatible
-filetype off
+command Bo :%! xxd
+command Bc :%! xxd -r
 
-if has("win32") || has("win64")
-  set rtp+=~/vimfiles/vundle.git/ 
-  call vundle#rc('~/vimfiles/bundle/')
-else
-  set rtp+=~/.vim/vundle.git/ 
-  call vundle#rc()
+
+function VG(text)
+    exe "cex [] | tabdo vimgrepa /" . a:text . "/ % | cw"
+    endfunction
+    command -nargs=1 VG call VG(<q-args>)
+    cnoreabbrev vg VG
+
+
+"set mouse=a
+
+
+set nocompatible               " Be iMproved
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/neobundle.vim.git
 endif
 
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimshell'
-Bundle 'Shougo/neocomplcache'
-Bundle 'tyru/restart.vim'
-Bundle 'tyru/caw.vim'
-Bundle 'TwitVim'
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/vimproc'
+
+" My Bundles here:
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'teramako/jscomplete-vim'
+NeoBundle 'git://github.com/aharisu/vim_goshrepl.git'
+" NeoBundle 'Shougo/unite.vim'
+
+" ...
+
+filetype plugin indent on     " Required!
+"
+" Brief help
+" :NeoBundleList          - list configured bundles
+" :NeoBundleInstall(!)    - install(update) bundles
+" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused
+" bundles
+
+" Installation check.
+NeoBundleCheck
+
+
