@@ -1,10 +1,10 @@
 disable r
 
-source "$HOME/.rvm/scripts/rvm"
-alias javah="javah -J-Dfile.encoding=UTF-8" 
+fpath=(~/.zsh $fpath)
+ [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-export DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
-export DYLD_SHARED_REGION=avoid
+# export DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
+# export DYLD_SHARED_REGION=avoid
 export COPY_EXTENDED_ATTRIBUTES_DISABLE=true
 export COPYFILE_DISABLE=true
 
@@ -17,14 +17,13 @@ alias co="git commit --verbose"
 alias ch="git checkout"
 alias gr="grunt"
 
-export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:$PATH:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/"
-alias apache_start="sudo /opt/local/apache2/bin/apachectl start"
-alias apache_stop="sudo /opt/local/apache2/bin/apachectl stop"
-alias apache_restart="sudo /opt/local/apache2/bin/apachectl restart"
-alias postgres_start="sudo -u postgres pg_ctl -D /opt/local/var/db/postgresql83/defaultdb start"
-alias postgres_stop="sudo -u postgres pg_ctl -D /opt/local/var/db/postgresql83/defaultdb stop"
-alias mysql_start="sudo /opt/local/lib/mysql5/bin/mysqld_safe &"
+
+alias o="open"
 alias mysql_stop="sudo /opt/local/bin/mysqladmin5 -u root -p shutdown"
+
+alias nginx_conf=""
+
+export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/opt/X11/bin:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/"
 
 alias random="ruby ~/gitrepos/randomimage/random.rb"
 
@@ -35,12 +34,11 @@ alias "gco"="git commit"
 alias "gch"="git checkout"
 alias "gpl"="git pull origin"
 
-
 # play framework
 PATH=$PATH:$HOME/play-2.1.0
 
 #nvm
-. ~/.nvm/nvm.sh
+# . ~/.nvm/nvm.sh
 #nvm use v0.4.11
 
 ## Environment variable configuration

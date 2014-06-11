@@ -51,7 +51,7 @@ install subversion
 cask install java
 
 # JDK7
-cask install java7
-
-install rbenv ruby-build
+install rbenv
+install pyenv
+install nginx
 

@@ -34,7 +34,6 @@ vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<CR><C
 command Bo :%! xxd
 command Bc :%! xxd -r
 
-
 function VG(text)
     exe "cex [] | tabdo vimgrepa /" . a:text . "/ % | cw"
     endfunction
@@ -48,7 +47,7 @@ function VG(text)
 set nocompatible               " Be iMproved
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/neobundle.vim.git
+  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
@@ -60,12 +59,9 @@ NeoBundle 'Shougo/vimproc'
 " My Bundles here:
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'git://github.com/aharisu/vim_goshrepl.git'
 " NeoBundle 'Shougo/unite.vim'
-
-" ...
-
+"
 filetype plugin indent on     " Required!
 "
 " Brief help
@@ -76,5 +72,3 @@ filetype plugin indent on     " Required!
 
 " Installation check.
 NeoBundleCheck
-
-
