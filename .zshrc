@@ -16,8 +16,8 @@ alias commit="git commit --verbose"
 alias co="git commit --verbose"
 alias ch="git checkout"
 alias gr="grunt"
-
-
+alias gp="git push origin"
+alias gpu="git pull origin"
 alias o="open"
 alias mysql_stop="sudo /opt/local/bin/mysqladmin5 -u root -p shutdown"
 
