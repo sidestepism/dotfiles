@@ -13,6 +13,7 @@ alias desktop_off="defaults write com.apple.finder CreateDesktop -boolean true &
 
 alias "git commit"="git commit --verbose"
 alias commit="git commit --verbose"
+alias ca="git commit -a --verbose"
 alias co="git commit --verbose"
 alias ch="git checkout"
 alias gr="grunt"
