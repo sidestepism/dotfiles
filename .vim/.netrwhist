@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/usr/local/share/zsh/site-functions'
 let g:netrw_dirhist_2='/usr/local/etc/bash_completion.d'
+let g:netrw_dirhist_3='/Users/ryohei/gitrepos/spajam-pre/server'
+let g:netrw_dirhist_4='/Users/ryohei/gitrepos/spajam-pre'
+let g:netrw_dirhist_5='/Users/ryohei/gitrepos/ionic/package.json'
+let g:netrw_dirhist_6='/Users/ryohei/gitrepos/EarSensorKit/EarSensorKit'

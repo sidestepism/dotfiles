@@ -19,10 +19,11 @@ alias gr="grunt"
 alias gp="git push origin"
 alias gpu="git pull origin"
 alias o="open"
+alias naepro="ssh -D 20005 -f -N naelab"
 alias mysql_stop="sudo /opt/local/bin/mysqladmin5 -u root -p shutdown"
-
-alias nginx_conf=""
-
+alias make="make -j8"
+alias nginx_conf="vi /usr/local/etc/nginx/nginx.conf"
+alias gl="git log --oneline --decorate --graph"
 export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/opt/X11/bin:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/"
 
 alias random="ruby ~/gitrepos/randomimage/random.rb"
@@ -34,8 +35,7 @@ alias "gco"="git commit"
 alias "gch"="git checkout"
 alias "gpl"="git pull origin"
 
-# play framework
-PATH=$PATH:$HOME/play-2.1.0
+PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
 
 #nvm
 # . ~/.nvm/nvm.sh
@@ -207,5 +207,12 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-PATH=$PATH:$HOME/.rbenv/bin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# eval "$(pyenv init -)"
+eval "$(rbenv init -)"
+
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+
+# virtualenvwrapper
+if [ -f ~/.virtualenvwrapperrc ]; then
+      source ~/.virtualenvwrapperrc
+  fi
