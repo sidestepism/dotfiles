@@ -1,3 +1,4 @@
+.DS_Store
 /vimfiles/bundle/
 .emacs.d/auto-save-list
 .saves-*
