@@ -59,6 +59,7 @@ NeoBundle 'Shougo/vimproc'
 " My Bundles here:
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'git://github.com/aharisu/vim_goshrepl.git'
 " NeoBundle 'Shougo/unite.vim'
 "

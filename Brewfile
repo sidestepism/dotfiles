@@ -2,7 +2,7 @@
 update
 
 # Update already-installed formula
-upgrade
+# upgrade
 
 # Add repositories
 tap homebrew/versions || true
@@ -36,22 +36,80 @@ cask install kobito || true
 cask install evernote  || true
 cask install google-japanese-ime || true
 cask install sublime-text  || true
-cask install alfred || true
+
+cask install google-hangouts
+
+cask install sequel-pro
+cask install mendeley-desktop
+# si .cask install keyremap4macbook-mountainlion
+cask install pycharm-ce
+cask install ripit
+cask install robomongo
+cask install skype
+cask install soundflower
+cask install the-unarchiver
+cask install transmit
+cask install yorufukurou
+cask install onepassword
+cask install audacity
+cask install bathyscaphe
+cask install disk-inventory-x
+cask install adobe-air alarm-clock arduino 
+cask install dropbox
+cask install clamxav
+cask install coteditor
+cask isntall ffmpegx
+cask install flip4mac
+cask install flash-player
+cask install github
+cask install heroku-toolbelt
+cask install slack
+cask install robomongo
+
 
 # Remove outdated versions
 cleanup
 
-# Git
+install 
 install git
-
-# SVN
 install subversion
 
 # JDK8
 cask install java
 
-# JDK7
-install rbenv
+
+# languages
+install go
+install node
 install pyenv
+install rbenv
+
+# development
 install nginx
+install elasticsearch
+install julius
+install jpeg
+install libpng
+install ffmpeg
+install ghc
+install glib
+install zlib
+install vim
+install mongodb
+
+install line 
+
+# sound 
+install sox
+
+# movie 
+install opencv
+install openssl
+install qr
+
+# other tools
+install tree
+install haskell-platform
+install bash-completion
+install lame
 

@@ -10,15 +10,15 @@ export COPYFILE_DISABLE=true
 
 alias desktop_on="defaults write com.apple.finder CreateDesktop -boolean false && killall Finder"
 alias desktop_off="defaults write com.apple.finder CreateDesktop -boolean true && killall Finder"
-
+alias deploy="ca; push; pm2 deploy ecosystem.json production"
 alias "git commit"="git commit --verbose"
 alias commit="git commit --verbose"
 alias ca="git commit -a --verbose"
 alias co="git commit --verbose"
 alias ch="git checkout"
 alias gr="grunt"
-alias gp="git push origin"
-alias gpu="git pull origin"
+alias push="git push origin"
+alias pull="git pull origin"
 alias o="open"
 alias naepro="ssh -D 20005 -f -N naelab"
 alias mysql_stop="sudo /opt/local/bin/mysqladmin5 -u root -p shutdown"
