@@ -17,3 +17,5 @@
 	enabled = true
 [push]
 	default = matching
+[credential]
+	helper = osxkeychain
