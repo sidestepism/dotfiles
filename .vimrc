@@ -46,30 +46,34 @@ function VG(text)
 
 set nocompatible               " Be iMproved
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-endif
+" Note: Skip initialization for vim-tiny or vim-small.
+ if 0 | endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+ if has('vim_starting')
+   if &compatible
+     set nocompatible               " Be iMproved
+   endif
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+   " Required:
+   set runtimepath+=~/.vim/bundle/neobundle.vim/
+ endif
 
-NeoBundle 'Shougo/vimproc'
+ " Required:
+ call neobundle#begin(expand('~/.vim/bundle/'))
 
-" My Bundles here:
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'vim-scripts/sudo.vim'
-NeoBundle 'git://github.com/aharisu/vim_goshrepl.git'
-" NeoBundle 'Shougo/unite.vim'
-"
-filetype plugin indent on     " Required!
-"
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused
-" bundles
+ " Let NeoBundle manage NeoBundle
+ " Required:
+ NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Installation check.
-NeoBundleCheck
+ " My Bundles here:
+ " Refer to |:NeoBundle-examples|.
+ " Note: You don't set neobundle setting in .gvimrc!
+
+ call neobundle#end()
+
+ " Required:
+ filetype plugin indent on
+
+ " If there are uninstalled bundles found on startup,
+ " this will conveniently prompt you to install them.
+ NeoBundleCheck
