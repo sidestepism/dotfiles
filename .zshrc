@@ -1,14 +1,11 @@
 disable r
-
-
-
 fpath=(~/.zsh $fpath)
  [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-# export DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
-# export DYLD_SHARED_REGION=avoid
 export COPY_EXTENDED_ATTRIBUTES_DISABLE=true
 export COPYFILE_DISABLE=true
+
+
 
 alias desktop_on="defaults write com.apple.finder CreateDesktop -boolean false && killall Finder"
 alias desktop_off="defaults write com.apple.finder CreateDesktop -boolean true && killall Finder"
@@ -24,10 +21,10 @@ alias pull="git pull origin"
 alias o="open"
 alias naepro="ssh -D 20005 -f -N naelab"
 alias mysql_stop="sudo /opt/local/bin/mysqladmin5 -u root -p shutdown"
-alias make="make -j8"
+#alias make="make -j8"
 alias nginx_conf="vi /usr/local/etc/nginx/nginx.conf"
 alias gl="git log --oneline --decorate --graph"
-export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/opt/X11/bin:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/"
+export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/opt/X11/bin:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/:/Applications/iotdk-ide-mac/devkit-x86/sysroots/i386-pokysdk-darwin/usr/bin/i586-poky-linux"
 
 alias random="ruby ~/gitrepos/randomimage/random.rb"
 
@@ -48,7 +45,9 @@ PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
 #
 # LANG
 #
-export LANG=ja_JP.UTF-8
+export LANG=ja_JP
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 ## Default shell configuration
 #
@@ -191,8 +190,6 @@ kterm*|xterm*)
   ;;
 esac
 
-# git 作業状態
-
 # ${fg[...]} や $reset_color をロード
 autoload -U colors; colors
 
@@ -210,12 +207,32 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# eval "$(pyenv init -)"
+#eval "$(pyenv init -)"
+
+# pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+fi
+# caffe
+export PYTHONPATH=$HOME/gitrepos/caffe/python:/usr/local/Cellar/opencv/2.4.9/lib/python2.7/site-packages:$PYTHONPATH
+
 eval "$(rbenv init -)"
 
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+#export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+#	a.out
+#	app.js.orig
 
 # virtualenvwrapper
-if [ -f ~/.virtualenvwrapperrc ]; then
-      source ~/.virtualenvwrapperrc
-  fi
+#if [ -f ~/.virtualenvwrapperrc ]; then
+#      source ~/.virtualenvwrapperrc
+#  fi
+#
+export OPENNI2_INCLUDE=/usr/local/include/ni2
+export OPENNI2_REDIST=/usr/local/lib/ni2
+
+export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:/usr/local/lib:/usr/lib:/Developer/NVIDIA/CUDA-7.0/lib:
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$HOME/go/bin
+export GOPATH=$HOME/go
+export PATH="/usr/local/sbin:$PATH"

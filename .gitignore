@@ -2,3 +2,9 @@
 /vimfiles/bundle/
 .emacs.d/auto-save-list
 .saves-*
+node_modules
+*.pyc
+*.o
+.Trashes
+.Spotlight-V100
+

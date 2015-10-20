@@ -1,14 +1,19 @@
 [core]
 	editor = /usr/bin/vim
-	excludesfile = /Users/ryohei/.global_ignore
+	excludesfile = /Users/ryohei/.gitignore
 [user]
 	name = sidestepism
 	email = fushimi.ryohe.i@gmail.com
 [github]
 	user = sidestepism
 	token = 0173808b2d7c475fcd29cfd8d242353d
+[pager]
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
 [alias]
 	log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+	tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
 [color]
 	ui = auto
 [merge]
@@ -19,3 +24,15 @@
 	default = matching
 [credential]
 	helper = osxkeychain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[http]
+	sslVerify = false
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
