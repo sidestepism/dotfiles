@@ -1,24 +1,23 @@
 # Makesure using Homebrew
-update
+# update
 
 # Update already-installed formula
 # upgrade
 
 # Add repositories
-tap homebrew/versions || true
-tap caskroom/cask || true
-tap caskroom/versions || true
+#tap homebrew/versions || true
+#tap caskroom/cask || true
+#tap caskroom/versions || true
 
 # Update Homebrew
-update || true
+#update || true
 # tap phinze/homebrew-cask || true
 # tap homebrew/binary || true
 
 
 # Install formulae
-install brew-cask || true
-install zsh || true
-install wget || true
+install zsh
+install wget
 
 
 # Packages for development
@@ -55,7 +54,8 @@ cask install onepassword
 cask install audacity
 cask install bathyscaphe
 cask install disk-inventory-x
-cask install alarm-clock arduino
+cask install alarm-clock
+cask install arduino
 cask install dropbox
 cask install clamxav
 cask install coteditor

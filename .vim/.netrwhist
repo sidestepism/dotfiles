@@ -1,10 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/ryohei/gitrepos/cyber-web/scripts'
-let g:netrw_dirhist_2='/Users/ryohei/gitrepos/cyber-web'
-let g:netrw_dirhist_3='/Users/ryohei/gitrepos/cyber-web/cyberweb'
-let g:netrw_dirhist_4='/Users/ryohei/.ssh'
-let g:netrw_dirhist_5='/Users/ryohei/gitrepos/caffe/python'
-let g:netrw_dirhist_6='/Users/ryohei/gitrepos/caffe/python/caffe'
-let g:netrw_dirhist_7='/Users/ryohei/gitrepos/2zicon-server/2zicon-client'
-let g:netrw_dirhist_8='/Users/ryohei/gitrepos/2zicon-server'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users'
+let g:netrw_dirhist_2='/'
