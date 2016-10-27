@@ -21,7 +21,7 @@
 [rerere]
 	enabled = true
 [push]
-	default = matching
+	default = upstream
 [credential]
 	helper = osxkeychain
 [difftool "sourcetree"]
@@ -32,7 +32,10 @@
 	trustExitCode = true
 [http]
 	sslVerify = false
+	postBuffer = 524288000
 [filter "media"]
 	clean = git media clean %f
 	smudge = git media smudge %f
 	required = true
+[rebase]
+	autosquash = true
