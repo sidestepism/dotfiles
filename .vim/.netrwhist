@@ -1,8 +1,13 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =2
 <<<<<<< HEAD
+<<<<<<< HEAD
 let g:netrw_dirhist_1='/Users'
 let g:netrw_dirhist_2='/'
+=======
+let g:netrw_dirhist_1='/Users/ryohei/gitrepos/interarch'
+let g:netrw_dirhist_2='/Users/ryohei/.ssh'
+>>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
 =======
 let g:netrw_dirhist_1='/Users/ryohei/gitrepos/interarch'
 let g:netrw_dirhist_2='/Users/ryohei/.ssh'
