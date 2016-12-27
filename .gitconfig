@@ -37,7 +37,10 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 	required = true
+<<<<<<< HEAD
 [interactive]
 	diffFilter = diff-highlight
+=======
+>>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
 [rebase]
 	autosquash = true
