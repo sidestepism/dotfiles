@@ -192,7 +192,7 @@ esac
 autoload -U colors; colors
 
 
-s_info 設定
+# vcs_info 設定
 
 RPROMPT=""
 
