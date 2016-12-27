@@ -5,8 +5,6 @@ fpath=(~/.zsh $fpath)
 export COPY_EXTENDED_ATTRIBUTES_DISABLE=true
 export COPYFILE_DISABLE=true
 
-
-
 alias desktop_on="defaults write com.apple.finder CreateDesktop -boolean false && killall Finder"
 alias desktop_off="defaults write com.apple.finder CreateDesktop -boolean true && killall Finder"
 alias deploy="ca; push; pm2 deploy ecosystem.json production"
@@ -24,8 +22,12 @@ alias mysql_stop="sudo /opt/local/bin/mysqladmin5 -u root -p shutdown"
 #alias make="make -j8"
 alias nginx_conf="vi /usr/local/etc/nginx/nginx.conf"
 alias gl="git log --oneline --decorate --graph"
+<<<<<<< HEAD
 export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/Library/TeX/texbin:/usr/sbin:/sbin"
 
+=======
+export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/opt/X11/bin:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/:/Applications/iotdk-ide-mac/devkit-x86/sysroots/i386-pokysdk-darwin/usr/bin/i586-poky-linux"
+>>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
 alias random="ruby ~/gitrepos/randomimage/random.rb"
 
 alias "si"="subl"
@@ -36,7 +38,7 @@ alias "gch"="git checkout"
 alias "gpl"="git pull origin"
 
 PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
-
+PATH=$PATH:/usr/local/mysql/bin
 #nvm
 # . ~/.nvm/nvm.sh
 #nvm use v0.4.11
@@ -402,9 +404,21 @@ eval "$(rbenv init -)"
 export OPENNI2_INCLUDE=/usr/local/include/ni2
 export OPENNI2_REDIST=/usr/local/lib/ni2
 
-export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:/usr/local/lib:/usr/lib:/Developer/NVIDIA/CUDA-7.0/lib:
+#export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:/usr/local/lib:/usr/lib:/Developer/NVIDIA/CUDA-7.0/lib:
 export PATH=$PATH:/usr/local/opt/go/libexec/bin:$HOME/go/bin
 export GOPATH=$HOME/go
 export PATH="/usr/local/sbin:$PATH"
 
+<<<<<<< HEAD
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+=======
+export CUDA_ROOT=/Developer/NVIDIA/CUDA-7.0/
+export PATH=$PATH:/Developer/NVIDIA/CUDA-7.0/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.0/lib
+export CPATH=$CPATH:/Developer/NVIDIA/CUDA-7.0/include
+export CUDA_INC_DIR=/Developer/NVIDIA/CUDA-7.0/bin:$CUDA_INC_DIR
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.0/lib
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/iWiper_SDK_1_0/local/bin"
+>>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
