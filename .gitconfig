@@ -8,9 +8,9 @@
 	user = sidestepism
 	token = 0173808b2d7c475fcd29cfd8d242353d
 [pager]
-    log = diff-highlight | less
-    show = diff-highlight | less
-    diff = diff-highlight | less
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
 [alias]
 	log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
 	tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s\"
@@ -36,3 +36,5 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 	required = true
+[interactive]
+	diffFilter = diff-highlight
