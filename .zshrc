@@ -22,20 +22,8 @@ alias mysql_stop="sudo /opt/local/bin/mysqladmin5 -u root -p shutdown"
 #alias make="make -j8"
 alias nginx_conf="vi /usr/local/etc/nginx/nginx.conf"
 alias gl="git log --oneline --decorate --graph"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/Library/TeX/texbin:/usr/sbin:/sbin"
 
-=======
 export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/opt/X11/bin:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/:/Applications/iotdk-ide-mac/devkit-x86/sysroots/i386-pokysdk-darwin/usr/bin/i586-poky-linux"
->>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
-=======
-export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/opt/X11/bin:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/:/Applications/iotdk-ide-mac/devkit-x86/sysroots/i386-pokysdk-darwin/usr/bin/i586-poky-linux"
->>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
-=======
-export PATH="/Users/ryohei/local/bin:/Users/ryohei/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/opt/X11/bin:/opt/android-ndk-r8e:/opt/local/sbin:/Applications/android-sdk-mac_x86/platform-tools:/Users/ryohei/opt/local/5.5.15/bin/:/Applications/iotdk-ide-mac/devkit-x86/sysroots/i386-pokysdk-darwin/usr/bin/i586-poky-linux"
->>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
 alias random="ruby ~/gitrepos/randomimage/random.rb"
 
 alias "si"="subl"
@@ -417,15 +405,7 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin:$HOME/go/bin
 export GOPATH=$HOME/go
 export PATH="/usr/local/sbin:$PATH"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-=======
-=======
->>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
-=======
->>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
 export CUDA_ROOT=/Developer/NVIDIA/CUDA-7.0/
 export PATH=$PATH:/Developer/NVIDIA/CUDA-7.0/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.0/lib
@@ -435,10 +415,3 @@ export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.0/lib
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/iWiper_SDK_1_0/local/bin"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
-=======
->>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
-=======
->>>>>>> 51d56bcecefc6425a1145494752dd5eb1716028d
